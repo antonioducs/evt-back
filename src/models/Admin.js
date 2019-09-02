@@ -9,6 +9,10 @@ const AdminSchema = new mongoose.Schema({
     senha: {
         type: String,
         required: true
+    },
+    conected: {
+        type: Boolean,
+        default: false
     }
 })
 
