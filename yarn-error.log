@@ -2,7 +2,7 @@ Arguments:
   C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add corsgit
 
 PATH: 
-  C:\Users\JhiovanePinheiro\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\JhiovanePinheiro\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Microchip\xc8\v2.10\bin;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\4.2\bin;C:\Users\JhiovanePinheiro\AppData\Local\Microsoft\WindowsApps;C:\Users\JhiovanePinheiro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JhiovanePinheiro\AppData\Roaming\npm;C:\Users\JhiovanePinheiro\AppData\Local\Yarn\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Microchip\xc8\v2.10\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\4.2\bin;C:\Users\JhiovanePinheiro\AppData\Local\Microsoft\WindowsApps;C:\Users\JhiovanePinheiro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JhiovanePinheiro\AppData\Roaming\npm;C:\Users\JhiovanePinheiro\AppData\Local\Yarn\bin;C:\Program Files\MongoDB\Server\4.2\bin;
 
 Yarn version: 
   1.17.3
