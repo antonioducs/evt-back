@@ -12,6 +12,12 @@ class AdminController {
       const savedAdmin = await Admin.create(admin);
       return res.json(savedAdmin);
     }
+
+    async save(req) {
+      const admin = req.body;
+      await Admin.create(admin);
+    }
+    
     async show(req, res) {
       const id = req.params.id;
       const admin = await Admin.findById(id);
