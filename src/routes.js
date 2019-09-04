@@ -10,7 +10,7 @@ routes.get("/admin/:id", AdminController.show);
 routes.put("/admin/:id", AdminController.update);
 routes.delete("/admin/:id", AdminController.delete);
 
-//routes.get("/insc", InscricaoController.index);
+routes.get("/insc", InscricaoController.index);
 //routes.post("/insc", InscricaoController.store);
 //routes.get("/insc/:id", InscricaoController.show);
 //routes.put("/insc/:id", InscricaoController.update);
