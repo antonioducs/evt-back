@@ -11,9 +11,8 @@ class AcessController {
   async login(req, res) {
 
     const admins = await Admin.find();
-
     var id = 0;
-    console.log(req);
+
     (admins.length && admins.map(item => {
       if (item.email === req.body.email && item.senha === req.body.senha) {
         id = item._id;
@@ -156,14 +155,14 @@ class AcessController {
     const insc = await Inscricao.find();
     var ret = true;
     (insc.length && insc.map(item => {
-      if (insc.cpf === req.body.cpf)
+      if (item.cpf === req.body.cpf)
         ret = false;
     }))
 
     if (ret) {
       InscricaoController.newInsc(req);
     }
-    return res = ret;
+    return res.json({ret});
   }
 }
 
