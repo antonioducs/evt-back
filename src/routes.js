@@ -12,4 +12,7 @@ routes.post("/saveInsc/", AcessController.saveInsc);
 routes.post("/deleteInsc/", AcessController.deleteInsc);
 routes.post("/creatInsc/", AcessController.creatInsc);
 
+
+
+
 module.exports = routes;
