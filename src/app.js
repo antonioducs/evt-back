@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const cors = require('cors');
-const requestIp = require('request-ip');
+//const requestIp = require('request-ip');
 
-app.use(requestIp.mw())
+//app.use(requestIp.mw())
 
 mongoose.connect(
   process.env.MONGO_URL, {
