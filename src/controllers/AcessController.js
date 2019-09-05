@@ -189,6 +189,12 @@ class AcessController {
     }
     return res.json({ ret });
   }
+  async qtdInsc(req, res) {
+    const insc = await Inscricao.find();
+    var qtd = insc.length;
+    return res.json({qtd});
+    //return response.data.qtd
+  }
 }
 
 module.exports = new AcessController();
