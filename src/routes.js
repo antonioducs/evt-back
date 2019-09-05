@@ -16,5 +16,5 @@ routes.post("/creatInsc/", AcessController.creatInsc);
 
 
 
-routes.post("/qtdInsc", AcessController.qtdInsc); 
+routes.get("/qtdInsc", AcessController.qtdInsc); 
 module.exports = routes;
