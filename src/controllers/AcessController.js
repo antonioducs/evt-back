@@ -9,8 +9,8 @@ var nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-  	user: "eventocaduemspba@gmail.com",
-  	pass: "uemspbacad2019"
+    user: "eventocaduemspba@gmail.com",
+    pass: "uemspbacad2019"
   },
 });
 
@@ -18,15 +18,15 @@ const mailOptions = {
   from: 'eventocaduemspba@gmail.com',
   to: 'antonioduarte@alunos.utfpr.edu.br',
   subject: 'Inscrição Evento de Estudos Jurídicos e Sociais',
-  text: 
-  'Sua inscrição foi realizada com sucesso!\n\n'+
-  'Para efetivá-la, é necessário realizar o pagamento. Entre em contato conosco por algum de nossos portais de comunicação.\n\n'+
-  'Atenciosamente,\n'+
-  'Centro Acadêmico de Direto Desembargador Leão Neto do Carmo\n'+
-  'email: cadesembargador@gmail.com<\n'+
-  'tel: +55 67 98117-7918 | +55 67 9823-7255\n'+
-  'Insta: @caduemspba\n'+
-  'Avenida João Rodrigues de Melo – Jardim Santa Mônica - Paranaíba - MS'
+  text:
+    'Sua inscrição foi realizada com sucesso!\n\n' +
+    'Para efetivá-la, é necessário realizar o pagamento. Entre em contato conosco por algum de nossos portais de comunicação.\n\n' +
+    'Atenciosamente,\n' +
+    'Centro Acadêmico de Direto Desembargador Leão Neto do Carmo\n' +
+    'email: cadesembargador@gmail.com<\n' +
+    'tel: +55 67 98117-7918 | +55 67 9823-7255\n' +
+    'Insta: @caduemspba\n' +
+    'Avenida João Rodrigues de Melo – Jardim Santa Mônica - Paranaíba - MS'
 };
 
 class AcessController {
@@ -183,17 +183,33 @@ class AcessController {
     }))
 
     if (ret) {
+      const insc = await Inscricao.find();
+      var qtd = 0;
+      (insc.length && insc.map(item => {
+        if (item.stateInsc === true)
+          qtd += 1;
+      }))
+
+      if (qtd >= 200)
+        ret = false;
+    }
+
+    if (ret) {
       InscricaoController.newInsc(req);
       mailOptions.to = req.body.email;
-      transporter.sendMail(mailOptions, function(error, info){});
+      transporter.sendMail(mailOptions, function (error, info) { });
     }
     return res.json({ ret });
   }
   async qtdInsc(req, res) {
     const insc = await Inscricao.find();
-    var qtd = insc.length;
-    return res.json({qtd});
-    //return response.data.qtd
+    var qtd = 0;
+    (insc.length && insc.map(item => {
+      if (item.stateInsc === true)
+        qtd += 1;
+    }))
+
+    return res.json({ qtd });
   }
 }
 
