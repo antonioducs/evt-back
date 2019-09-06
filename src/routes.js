@@ -13,4 +13,6 @@ routes.post("/saveInsc/", AcessController.saveInsc);
 routes.post("/deleteInsc/", AcessController.deleteInsc);
 routes.post("/creatInsc/", AcessController.creatInsc);
 
+
+routes.get("/qtdInsc", AcessController.qtdInsc); 
 module.exports = routes;
