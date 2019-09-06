@@ -44,8 +44,8 @@ class InscricaoController {
         tel: inscricao.tel,
         stateInsc: inscricao.stateInsc            
       };
-      const updatedInscricao = await Inscricao.findOneAndUpdate(inscricao._id, salve, {
-        new: true
+      const updatedInscricao = await Inscricao.findByIdAndUpdate(inscricao._id, salve, {
+        new: false
       });
     }
 
